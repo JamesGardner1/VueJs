@@ -9,6 +9,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.js"></script>
         <meta charset="UTF-8">
     </head>
+
     <body>
         <div class="container">
         <div id="app">
@@ -49,7 +50,8 @@
                                 <span class="inventory-message" v-else>Buy Now!
                                 </span>
                                 <div class="rating">
-                  <span v-bind:class="{'rating-active' :checkRating(n, product)}" v-for="n in 5">☆</span>
+                                  <span v-bind:class="{'rating-active' :checkRating(n, product)}" v-for="n in 5">☆
+                                  </span>
                                 </div>
                             </div>
                         </div>
@@ -134,16 +136,16 @@
                                         </div>
                                     </div>
                                     <div class="col-md-12 verify">
-                                    <pre>
-                                        First Name: {{order.firstName}}
-                                        Last Name: {{order.lastName}}
-                                        Address: {{order.address}}
-                                        City: {{order.city}}
-                                        Zip: {{order.zip}}
-                                        State: {{order.state}}
-                                        Method: {{order.method}}
-                                        Gift: {{order.gift}}
-                                    </pre>
+                                        <pre>
+                                            First Name: {{order.firstName}}
+                                            Last Name: {{order.lastName}}
+                                            Address: {{order.address}}
+                                            City: {{order.city}}
+                                            Zip: {{order.zip}}
+                                            State: {{order.state}}
+                                            Method: {{order.method}}
+                                            Gift: {{order.gift}}
+                                        </pre>
                                     </div>
                                 </div>
                             </div>
@@ -180,11 +182,11 @@
                         method: 'Home Address',
                         business: 'Business Address',
                         home: 'Home Address',
-                        gift: 'Send As A Gift',
+                        gift: '',
                         sendGift: 'Sends As A Gift',
                         dontSendGift: 'Do Not Send As A Gift'
                     },
-                    product: {},
+                    products: {},
                     cart: []
                 },
                 methods: {
